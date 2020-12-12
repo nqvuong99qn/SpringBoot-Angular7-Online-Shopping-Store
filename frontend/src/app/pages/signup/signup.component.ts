@@ -3,6 +3,7 @@ import {Location} from '@angular/common';
 import {User} from "../../models/User";
 import {UserService} from "../../services/user.service";
 import {Router} from "@angular/router";
+import { Role } from 'src/app/enum/Role';
 
 @Component({
   selector: 'app-signup',
@@ -12,6 +13,10 @@ import {Router} from "@angular/router";
 export class SignupComponent implements OnInit {
 
   user: User;
+
+  selected: String;
+
+  
 
   constructor( private location: Location,
                private userService: UserService,

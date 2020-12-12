@@ -80,6 +80,5 @@ public class UserController {
         } else {
             return ResponseEntity.badRequest().build();
         }
-
     }
 }

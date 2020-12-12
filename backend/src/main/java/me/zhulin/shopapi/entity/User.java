@@ -29,7 +29,7 @@ public class User implements Serializable {
     @NotEmpty
     private String email;
     @NotEmpty
-    @Size(min = 3, message = "Length must be more than 3")
+    @Size(min = 5, message = "Length must be more than 5")
     private String password;
     @NotEmpty
     private String name;
@@ -40,7 +40,7 @@ public class User implements Serializable {
     @NotNull
     private boolean active;
     @NotEmpty
-    private String role = "ROLE_CUSTOMER";
+    private String role;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonIgnore  // fix bi-direction toString() recursion problem

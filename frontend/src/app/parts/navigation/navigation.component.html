@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
     <a class="navbar-brand" [routerLink]="root">
         <img src="/assets/brand.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        E-Shop
+        KOLB
     </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -10,23 +10,23 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
 
-        <div class="navbar-nav" *ngIf="!currentUser || currentUser.role == Role.Customer">
+        <div class="navbar-nav" *ngIf="!currentUser || currentUser.role == Role.Customer" id="menu">
 
-            <a class="nav-item nav-link "
+            <a class="nav-item nav-link"   
                routerLink="/category/0">
-                Books
+                Tin tức
             </a>
             <a class="nav-item nav-link"
                routerLink="/category/1">
-                Food
-            </a>
+                Giới thiệu
+            </a>    
             <a class="nav-item nav-link "
                routerLink="/category/2">
-                Clothes
+                Sản phẩm
             </a>
             <a class="nav-item nav-link"
                routerLink="/category/3">
-                Drink
+                Liên hệ
             </a>
 
         </div>

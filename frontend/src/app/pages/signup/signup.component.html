@@ -55,9 +55,33 @@
             </div>
         </div>
     </div>
+
+    <div class="form-group" >
+      <label><b>Role</b></label>
+      <br>
+       <select >
+        <option [ngValue]="user.role">
+          Customer
+        </option >
+        <option>
+          Manager
+        </option>
+        <option>
+          Employee
+        </option>
+       </select>
+        
+       {{user.role}}
+    </div>
+
+
+    
     <div class="form-group">
       <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!form.form.valid" >Sign Up</button>
     </div>
   </form>
+
+
 </div>
+
 

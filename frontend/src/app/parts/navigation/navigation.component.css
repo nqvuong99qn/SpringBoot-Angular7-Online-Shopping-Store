@@ -1,0 +1,17 @@
+nav{
+    background-color: black;
+}
+#menu a{
+    color:white;  
+}
+
+#menu a:hover{
+    color:green;
+    
+}
+
+
+#menu{
+    margin-left: auto;
+    
+}
