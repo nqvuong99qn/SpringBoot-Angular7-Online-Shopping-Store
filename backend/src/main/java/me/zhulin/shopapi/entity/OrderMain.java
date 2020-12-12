@@ -16,10 +16,7 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * OrderMain contains User info and products in the order
- * Created By Zhu Lin on 3/14/2018.
- */
+
 @Entity
 @Data
 @NoArgsConstructor

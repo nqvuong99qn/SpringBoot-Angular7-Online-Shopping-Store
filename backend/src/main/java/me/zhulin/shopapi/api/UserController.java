@@ -18,16 +18,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 
-/**
- * Created By Zhu Lin on 1/1/2019.
- */
+
 @CrossOrigin
 @RestController
 public class UserController {
 
     @Autowired
     UserService userService;
-
 
     @Autowired
     JwtProvider jwtProvider;

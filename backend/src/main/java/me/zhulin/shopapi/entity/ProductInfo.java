@@ -14,9 +14,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-/**
- * Created By Zhu Lin on 3/10/2018.
- */
+
 @Entity
 @Data
 @DynamicUpdate
