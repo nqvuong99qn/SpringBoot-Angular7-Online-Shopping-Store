@@ -5,11 +5,11 @@
                   class="page-link"
                   [routerLink]="['./']"
                   [queryParams]="{ page: currentPage?.number, size: currentPage?.size }"
-          >Previous</a
+          >Trước</a
           >
     </li>
       <ng-template #prev>
-          <li class="page-item  disabled"><a class="page-link">Previous</a></li>
+          <li class="page-item  disabled"><a class="page-link">Trước</a></li>
       </ng-template>
 
       <ng-container *ngFor="let item of counter(currentPage?.totalPages); let i = index">
@@ -41,11 +41,11 @@
           page: currentPage?.number + 2,
           size: currentPage?.size
         }"
-          >Next</a
+          >Sau</a
           >
     </li>
     <ng-template #next>
-        <li class="page-item disabled "><a class="page-link">Next</a></li>
+        <li class="page-item disabled "><a class="page-link">Sau</a></li>
     </ng-template>
   </ul>
 </div>

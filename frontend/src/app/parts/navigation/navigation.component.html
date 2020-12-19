@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
     <a class="navbar-brand" [routerLink]="root">
-        <img src="/assets/brand.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        E-Shop
+        <img src="data:image/png;base64,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" width="30" height="30" class="d-inline-block align-top" alt="">
+        KOLB
     </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -14,19 +14,19 @@
 
             <a class="nav-item nav-link "
                routerLink="/category/0">
-                Books
+                Thương hiệu
             </a>
             <a class="nav-item nav-link"
                routerLink="/category/1">
-                Food
+                Áo
             </a>
             <a class="nav-item nav-link "
                routerLink="/category/2">
-                Clothes
+                Quần
             </a>
             <a class="nav-item nav-link"
                routerLink="/category/3">
-                Drink
+                Phụ kiện
             </a>
 
         </div>
@@ -47,15 +47,15 @@
                     {{name}}
                 </a>
                 <a class="nav-item nav-link " (click)="logout()" routerLink="/login" [queryParams]="{logout: true}">
-                    Sign Out
+                    Đăng xuất
                 </a>
             </ng-container>
             <ng-template #noUser>
                 <a class="nav-item nav-link " routerLink="/login">
-                    Sign In
+                    Đăng nhập
                 </a>
                 <a class="nav-item nav-link " routerLink="/register">
-                    Sign Up
+                    Đăng ký
                 </a>
             </ng-template>
         </div>

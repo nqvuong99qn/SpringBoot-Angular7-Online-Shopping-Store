@@ -1,5 +1,5 @@
 export enum OrderStatus {
-    "New",
-    "Finished",
-    "Cenceled"
+    "Tạo mới",
+    "Đã kết thúc",
+    "Đã hủy"
 }

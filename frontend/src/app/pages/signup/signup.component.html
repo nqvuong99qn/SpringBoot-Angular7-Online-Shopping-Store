@@ -1,62 +1,64 @@
-<h1 align="center" class="display-4 mb-5">Sign Up</h1>
+<h1 align="center" class="display-4 mb-5">Đăng ký</h1>
 <div style="width:40%; margin: 25px auto" >
   <form #form="ngForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label><b>Email address</b></label>
-      <input [(ngModel)]="user.email" type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Enter email" email required autofocus  #email="ngModel">
+      <label><b>Địa chỉ email</b></label>
+      <input [(ngModel)]="user.email" type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Nhập Email" email required autofocus  #email="ngModel">
       <div  *ngIf="email.invalid && (email.dirty ||email.touched)" >
           <div *ngIf="email.errors.required" >
-              Email is required.
+              Địa chỉ email là bắt buộc
           </div>
           <div *ngIf="email.errors.email">
-              Invalid Email.
+              Email không hợp lệ
           </div>
       </div>
     </div>
     <div class="form-group">
-      <label><b>Name</b></label>
-      <input [(ngModel)]="user.name" type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Your name" required #name="ngModel">
+      <label><b>Tên</b></label>
+      <input [(ngModel)]="user.name" type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Tên của bạn" required #name="ngModel">
         <div  *ngIf="name.invalid && (name.dirty ||name.touched)">
             <div *ngIf="name.errors.required">
-                Name is required.
+                Tên là bắt buộc
             </div>
             <div *ngIf="name.errors.minlength">
-                Name must be at least 3 characters long.
+                Tên phải có ít nhất ba ký tự
             </div>
         </div>
     </div>
     <div class="form-group">
       <label><b>Password</b></label>
-      <input  [(ngModel)]="user.password" type="password" class="form-control form-control-lg" id="password" name="password" placeholder="Password" minlength="3" required #password="ngModel">
+      <input  [(ngModel)]="user.password" type="password" class="form-control form-control-lg" id="password" name="password" placeholder="Nhập Mật khẩu" minlength="3" required #password="ngModel">
         <div  *ngIf="password.invalid && (password.dirty ||password.touched)">
             <div *ngIf="password.errors.required">
-                Password is required.
+                Mật khẩu là bắt buộc
             </div>
             <div *ngIf="password.errors.minlength">
-                Password must be at least 3 characters long.
+                Mật khẩu phải có ít nhất ba ký tự
             </div>
         </div>
     </div>
     <div class="form-group">
-      <label><b>Phone</b></label>
+      <label><b>Số điện thoại</b></label>
       <input [(ngModel)]="user.phone" type="text" class="form-control form-control-lg" id="phone" name="phone" placeholder="Phone" required #phone="ngModel" >
         <div  *ngIf="phone.invalid && (phone.dirty ||phone.touched)">
             <div *ngIf="phone.errors.required">
-                Phone is required.
+                Số điện thoại là bắt buộc
             </div>
         </div>
     </div>
     <div class="form-group">
-      <label><b>Address</b></label>
-      <input [(ngModel)]="user.address" type="text" class="form-control form-control-lg" id="address" name="address" placeholder="Address" required #address="ngModel">
+      <label><b>Địa chỉ</b></label>
+      <input [(ngModel)]="user.address" type="text" class="form-control form-control-lg" id="address" name="address" placeholder="Nhập địa chỉ" required #address="ngModel">
         <div  *ngIf="address.invalid && (address.dirty ||address.touched)">
             <div *ngIf="address.errors.required">
-                Address is required.
+                Địa chỉ là bắt buộc
             </div>
         </div>
     </div>
+
+    <!-- add type off account -->
     <div class="form-group">
-      <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!form.form.valid" >Sign Up</button>
+      <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!form.form.valid" >Đăng ký</button>
     </div>
   </form>
 </div>

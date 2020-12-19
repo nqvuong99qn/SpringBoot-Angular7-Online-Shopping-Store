@@ -1,20 +1,20 @@
-<h1 align="center" class="display-4 mb-5">Edit Profiles</h1>
+<h1 align="center" class="display-4 mb-5">Chỉnh sửa người dùng</h1>
 <div style="width:40%; margin: 25px auto" >
   <form #form="ngForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label><b>Email address</b></label>
+      <label><b>Địa chỉ email</b></label>
         <input readonly [value]=user?.email type="email" class="form-control form-control-lg " disabled id="email"
                name="email" placeholder="Enter email">
     </div>
     <div class="form-group">
-      <label><b>Name</b></label>
+      <label><b>Tên</b></label>
       <input [(ngModel)]="user.name" type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Your name" required #name="ngModel" autofocus>
       <div  *ngIf="name.invalid && (name.dirty || name.touched)">
         <div *ngIf="name.errors.required">
-          Name is required.
+          Tên là bắt buộc
         </div>
         <div *ngIf="name.errors.minlength">
-          Name must be at least 3 characters long.
+          Tên phải có ít nhất 3 ký tự
         </div>
       </div>
     </div>
@@ -23,10 +23,10 @@
       <input  [(ngModel)]="user.password" type="password" class="form-control form-control-lg" id="password" name="password" placeholder="Password" minlength="3" required #password="ngModel">
       <div  *ngIf="password.invalid && (password.dirty ||password.touched)">
         <div *ngIf="password.errors.required">
-          Password is required.
+          Mật khẩu là bắt buộc
         </div>
         <div *ngIf="password.errors.minlength">
-          Password must be at least 3 characters long.
+          Mật khẩu có độ dài nhỏ nhất là 3
         </div>
       </div>
     </div>
@@ -35,21 +35,21 @@
       <input [(ngModel)]="user.phone" type="text" class="form-control form-control-lg" id="phone" name="phone" placeholder="Phone" required #phone="ngModel" >
       <div  *ngIf="phone.invalid && (phone.dirty ||phone.touched)">
         <div *ngIf="phone.errors.required">
-          Phone is required.
+          Số điện thoại là bắt buộc
         </div>
       </div>
     </div>
     <div class="form-group">
-      <label><b>Address</b></label>
+      <label><b>Địa chỉ</b></label>
       <input [(ngModel)]="user.address" type="text" class="form-control form-control-lg" id="address" name="address" placeholder="Address" required #address="ngModel">
       <div  *ngIf="address.invalid && (address.dirty ||address.touched)">
         <div *ngIf="address.errors.required">
-          Address is required.
+          Địa chỉ là bắt buộc
         </div>
       </div>
     </div>
     <div class="form-group">
-      <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!form.form.valid" >Update</button>
+      <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!form.form.valid" >Cập nhật</button>
     </div>
   </form>
 </div>

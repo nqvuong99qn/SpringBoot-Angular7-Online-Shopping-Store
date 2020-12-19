@@ -1,4 +1,4 @@
-<h1 align="center" class="display-4 mb-5">Edit Product</h1>
+<h1 align="center" class="display-4 mb-5">Chỉnh sửa sản phẩm</h1>
 <div style="width:40%; margin: 25px auto">
     <form #form="ngForm" (ngSubmit)="onSubmit()">
         <!--Id-->
@@ -9,40 +9,39 @@
                    id="productId" name="productId" required #productId="ngModel">
             <div *ngIf="productIdInput.invalid && (productIdInput.dirty ||productIdInput.touched)">
                 <div *ngIf="productIdInput.errors.required">
-                    Name is required.
+                    Tên sản phẩm là bắt buộc
                 </div>
             </div>
         </div>
         <!--Photo-->
         <div class="form-group">
-            <label>Photo Link</label>
+            <label>URL hình ảnh</label>
             <input [(ngModel)]="product.productIcon" type="text" class="form-control form-control-lg" id="productIcon"
                    name="productIcon" placeholder="Photo">
         </div>
 
         <!--Name-->
         <div class="form-group">
-            <label>Name</label>
+            <label>Tên sản phẩm</label>
             <input [(ngModel)]="product.productName" type="text" class="form-control form-control-lg" id="productName"
                    #productName="ngModel"
                    name="productName" placeholder="Name" required>
         </div>
         <div *ngIf="productName.invalid && (productName.dirty ||productName.touched)">
             <div *ngIf="productName.errors.required">
-                Name is required.
+                Tên sản phẩm là bắt buộc
             </div>
         </div>
 
         <!--Category-->
         <div class="form-group">
-            <label for="categoryType">Category</label>
+            <label for="categoryType">Danh mục</label>
             <select class="custom-select custom-select-lg " id="categoryType" name="categoryType"
                     [(ngModel)]="product.categoryType"
                     required>
-                <option [ngValue]=0>Books</option>
-                <option [ngValue]=1>Food</option>
-                <option [ngValue]=2>Clothes</option>
-                <option [ngValue]=3>Drink</option>
+                <option [ngValue]=0>Áo</option>
+                <option [ngValue]=1>Quần</option>
+                <option [ngValue]=2>Phụ kiện</option>
             </select>
         </div>
 
